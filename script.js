@@ -1,13 +1,13 @@
-const form = document.getElementById("myForm");
+const form = document.getElementById("form");
 const tableBody = document.getElementById("myTable").getElementsByTagName('tbody')[0];
 
 form.onsubmit = function(event) {
   event.preventDefault(); // prevent form submission
 
-  const fname = document.getElementById("fname").value;
-  const lname = document.getElementById("lname").value;
-  const add = document.getElementById("add").value;
-  const pin = document.getElementById("pin").value;
+  const fname = document.getElementById("first-name").value;
+  const lname = document.getElementById("last-name").value;
+  const add = document.getElementById("address").value;
+  const pin = document.getElementById("pincode").value;
   const gender = document.querySelector("input[name='gen']:checked").value;
   const state = document.getElementById("state").value;
   const country = document.getElementById("count").value;
@@ -52,6 +52,6 @@ form.onsubmit = function(event) {
   choiceCell.appendChild(document.createTextNode(selectedFoods));
 
   // // clear input fields
-  document.getElementById("myForm").reset();
+  document.getElementById("form").reset();
 };
 
